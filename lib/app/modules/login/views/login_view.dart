@@ -15,8 +15,8 @@ class LoginView extends GetView<LoginController> {
         children: [
           Container(
             width: Get.width,
-            child: Image.asset(
-              'assets/images/bg.png',
+            child: Image(
+              image: AssetImage('assets/images/bg.png'),
               fit: BoxFit.cover,
             ),
           ),
@@ -56,7 +56,7 @@ class LoginView extends GetView<LoginController> {
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             primary: Color(0xFFEEF7FE),
-                            fixedSize: Size(150, 50),
+                            fixedSize: Size(120, 50),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15))),
                         onPressed: () {},
@@ -76,7 +76,7 @@ class LoginView extends GetView<LoginController> {
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             primary: Color(0xFF567DF4),
-                            fixedSize: Size(150, 50),
+                            fixedSize: Size(120, 50),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15))),
                         onPressed: () {
