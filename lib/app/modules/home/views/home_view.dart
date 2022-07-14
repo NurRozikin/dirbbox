@@ -48,7 +48,7 @@ class HomeView extends GetView<HomeController> {
             actions: [
               IconButton(
                   onPressed: () {
-                    //Get.toNamed(Routes.PROFILE);
+                    Get.toNamed(Routes.PROFILE);
                   },
                   icon: Image.asset('assets/icons/Union.png'))
             ],
