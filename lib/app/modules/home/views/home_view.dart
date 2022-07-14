@@ -135,6 +135,10 @@ class HomeView extends GetView<HomeController> {
               ),
             ],
           ),
+          SliverToBoxAdapter(
+              child: SizedBox(
+            height: 50,
+          )),
         ]),
       ),
     );
