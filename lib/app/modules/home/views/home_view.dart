@@ -11,6 +11,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF1F1F1),
+     
       /*
       appBar: AppBar(
         backgroundColor: Color(0xFFF1F1F1),
@@ -72,10 +73,10 @@ class HomeView extends GetView<HomeController> {
                   children: [
                     IconButton(
                         onPressed: () {},
-                        icon: Image.asset('assets/icons/Settings.png')),
+                        icon:Icon(Icons.menu_sharp)),
                     IconButton(
                         onPressed: () {},
-                        icon: Image.asset('assets/icons/Vector.png'))
+                        icon: Icon(Icons.grid_view_rounded))
                   ],
                 ),
               ),
@@ -141,6 +142,7 @@ class HomeView extends GetView<HomeController> {
           )),
         ]),
       ),
+      floatingActionButton: FloatingActionButton(onPressed: (){}, child: Icon(Icons.add),backgroundColor:Color(0xFF22215B) ,),
     );
   }
 }
