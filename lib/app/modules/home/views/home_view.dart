@@ -49,7 +49,7 @@ class HomeView extends GetView<HomeController> {
             actions: [
               IconButton(
                   onPressed: () {
-                    Get.toNamed(Routes.PROFILE);
+                    Get.offNamed(Routes.MENU);
                   },
                   icon: Image.asset('assets/icons/Union.png'))
             ],

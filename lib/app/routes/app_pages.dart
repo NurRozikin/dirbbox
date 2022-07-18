@@ -1,5 +1,8 @@
 import 'package:get/get.dart';
 
+import 'package:dirbbox/app/modules/menu/bindings/menu_binding.dart';
+import 'package:dirbbox/app/modules/menu/views/menu_view.dart';
+
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -29,6 +32,18 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.MENU,
+      page: () => MenuView(),
+      binding: MenuBinding(),
+      transition: Transition.leftToRightWithFade
+    ),
+    GetPage(
+      name: _Paths.MENUCLOSE,
+      page: () => HomeView(),
+      binding: HomeBinding(),
+      transition: Transition.rightToLeftWithFade
     ),
   ];
 }
