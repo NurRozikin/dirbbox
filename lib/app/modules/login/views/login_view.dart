@@ -1,3 +1,4 @@
+import 'package:dirbbox/app/controllers/auth_controller.dart';
 import 'package:dirbbox/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,8 @@ class LoginView extends GetView<LoginController> {
   const LoginView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    AuthController authController = Get.find<AuthController>();
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
@@ -59,7 +62,15 @@ class LoginView extends GetView<LoginController> {
                             fixedSize: Size(120, 50),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15))),
-                        onPressed: () {},
+                        onPressed: () async {
+                          bool cek =  await authController.authenticateIsAvailable();
+                          if(cek){
+                            bool isAuth = await authController.startAuthentication();
+                            if(isAuth){
+                              Get.offAllNamed(Routes.HOME);
+                            }
+                          }
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
